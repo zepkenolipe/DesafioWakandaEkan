@@ -1,5 +1,6 @@
 package br.com.ekan.desafioekan.beneficiario.domain;
 
+import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -21,11 +23,17 @@ public class Beneficiario {
     @NotBlank
     private String nome;
     @NotBlank
+    @Column(unique = true)
     private String telefone;
     @NotNull
     private LocalDate dataNascimento;
-    @NotNull
-    private LocalDate dataInclusao;
-    @NotNull
+    private LocalDateTime dataInclusao;
     private LocalDate dataAtualizacao;
+
+    public Beneficiario(BeneficiarioRequest beneficiarioRequest) {
+        this.nome = beneficiarioRequest.getNome();
+        this.telefone = beneficiarioRequest.getTelefone();
+        this.dataNascimento = beneficiarioRequest.getDataNascimento();
+        this.dataInclusao = LocalDateTime.now();
+    }
 }
