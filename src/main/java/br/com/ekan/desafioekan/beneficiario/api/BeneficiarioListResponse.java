@@ -25,6 +25,7 @@ public class BeneficiarioListResponse {
                 .map(BeneficiarioListResponse::new)
                 .collect(Collectors.toList());
     }
+
     private BeneficiarioListResponse(Beneficiario beneficiario) {
         this.idBeneficiario = beneficiario.getIdBeneficiario();
         this.nome = beneficiario.getNome();

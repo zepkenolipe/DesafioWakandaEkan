@@ -12,7 +12,7 @@ public interface BeneficiarioAPI {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    BeneficiarioResponse postBeneficiario(@Valid@RequestBody BeneficiarioRequest beneficiarioRequest);
+    BeneficiarioResponse postBeneficiario(@Valid @RequestBody BeneficiarioRequest beneficiarioRequest);
 
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)

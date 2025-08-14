@@ -12,6 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BeneficiarioController implements BeneficiarioAPI {
     private final BeneficiarioService beneficiarioService;
+
     @Override
     public BeneficiarioResponse postBeneficiario(BeneficiarioRequest beneficiarioRequest) {
         log.info("[inicia] BeneficiarioController - postBeneficiario");

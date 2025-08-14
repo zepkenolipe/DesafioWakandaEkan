@@ -33,4 +33,5 @@ public class BeneficiarioApplicationService implements BeneficiarioService {
         List<Beneficiario> beneficiarios = beneficiarioRepository.buscaTodosBeneficiarios();
         log.info("[finaliza] BeneficiarioApplicationService - buscaTodosBeneficiarios");
         return BeneficiarioListResponse.converte(beneficiarios);
+    }
 }
