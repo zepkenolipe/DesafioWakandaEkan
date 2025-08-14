@@ -1,5 +1,6 @@
 package br.com.ekan.desafioekan.beneficiario.domain;
 
+import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioAlteracaoRequest;
 import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -28,12 +29,19 @@ public class Beneficiario {
     @NotNull
     private LocalDate dataNascimento;
     private LocalDateTime dataInclusao;
-    private LocalDate dataAtualizacao;
+    private LocalDateTime dataAtualizacao;
 
     public Beneficiario(BeneficiarioRequest beneficiarioRequest) {
         this.nome = beneficiarioRequest.getNome();
         this.telefone = beneficiarioRequest.getTelefone();
         this.dataNascimento = beneficiarioRequest.getDataNascimento();
         this.dataInclusao = LocalDateTime.now();
+    }
+
+    public void altera(BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest) {
+        this.nome = beneficiarioAlteracaoRequest.getNome();
+        this.telefone = beneficiarioAlteracaoRequest.getTelefone();
+        this.dataNascimento = beneficiarioAlteracaoRequest.getDataNascimento();
+        this.dataAtualizacao = LocalDateTime.now();
     }
 }
