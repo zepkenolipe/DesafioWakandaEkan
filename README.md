@@ -3,8 +3,8 @@
 Este projeto é uma aplicação Java com **Spring Boot** que expõe endpoints REST para gerenciar beneficiários de um plano de saúde e seus documentos.
 
 ## 📌 Tecnologias Utilizadas
-- Java 17+
-- Spring Boot 3.x
+- Java 17
+- Spring Boot 3.5.4
 - Spring Web
 - Spring Data JPA
 - Banco embarcado **H2**
