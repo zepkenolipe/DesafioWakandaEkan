@@ -16,6 +16,7 @@ public class BeneficiarioListResponse {
     private String telefone;
     private LocalDate dataNascimento;
     private LocalDateTime dataInclusao;
+    private LocalDateTime dataAtualizacao;
 
     public static List<BeneficiarioListResponse> converte(List<Beneficiario> beneficiarios) {
         return beneficiarios.stream()
@@ -29,5 +30,6 @@ public class BeneficiarioListResponse {
         this.telefone = beneficiario.getTelefone();
         this.dataNascimento = beneficiario.getDataNascimento();
         this.dataInclusao = beneficiario.getDataInclusao();
+        this.dataAtualizacao = beneficiario.getDataAtualizacao();
     }
 }
