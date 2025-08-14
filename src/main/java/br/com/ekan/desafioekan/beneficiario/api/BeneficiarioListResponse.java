@@ -1,9 +1,6 @@
 package br.com.ekan.desafioekan.beneficiario.api;
 
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Value;
 
 import java.time.LocalDate;
