@@ -84,18 +84,15 @@ http://localhost:8080/desafio-ekan/api
 ## 🔗 Endpoints
 
 ### Beneficiários
-- **POST** `/beneficiario` → Cadastrar beneficiário junto com documentos
-- **GET** `/beneficiario` → Listar todos beneficiários
-- **GET** `/beneficiario/{id}/documentos` → Listar documentos de um beneficiário
-- **PUT** `/beneficiario/{id}` → Atualizar beneficiário
-- **DELETE** `/beneficiario/{id}` → Remover beneficiário
+- **POST** `/beneficiario` → Cadastrar um beneficiário
+- **GET** `/beneficiario` → Listar todos os beneficiários cadastrados
+- **GET** `/beneficiario/{id}` → Listar dados de um beneficiário
+- **PATCH** `/beneficiario/{id}` → Atualizar os dados cadastrais de um beneficiário
+- **DELETE** `/beneficiario/{id}` → Remover um beneficiário
 
 ### Documentos (vinculados a beneficiário)
-- **POST** `/beneficiario/{idBeneficiario}/documentos` → Cadastrar documento para um beneficiário
-- **GET** `/beneficiario/{idBeneficiario}/documentos` → Listar todos documentos de um beneficiário
-- **GET** `/beneficiario/{idBeneficiario}/documentos/{idDocumento}` → Buscar documento específico de um beneficiário
-- **PUT** `/beneficiario/{idBeneficiario}/documentos/{idDocumento}` → Atualizar documento de um beneficiário
-- **DELETE** `/beneficiario/{idBeneficiario}/documentos/{idDocumento}` → Remover documento de um beneficiário
+- **POST** `/beneficiario/{idBeneficiario}/documento` → Cadastrar um documento para um beneficiário
+- **GET** `/beneficiario/{idBeneficiario}/documento` → Listar todos os documentos de um beneficiário a partir de seu id
 
 ---
 
