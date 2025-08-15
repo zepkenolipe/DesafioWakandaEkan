@@ -1,5 +1,6 @@
 package br.com.ekan.desafioekan.documento.api;
 
+import br.com.ekan.desafioekan.documento.service.DocumentoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +14,10 @@ public class DocumentoController implements DocumentoAPI {
 
     @Override
     public DocumentoResponse postDocumento(UUID idBeneficiario, DocumentoRequest DocumentoRequest) {
-
-        return null;
+        log.info("[inicia] DocumentoController - postDocumento");
+        DocumentoResponse documento = DocumentoService.criaDocumento(idBeneficiario, DocumentoRequest);
+        log.info("[finaliza] DocumentoController - postDocumento");
+        return documento;
     }
 }
 
