@@ -24,6 +24,7 @@ public class Documento {
     private UUID idBeneficiarioDocumento;
 
     @Enumerated(EnumType.STRING)
+    @Column(unique = true)
     private TipoDocumento tipoDocumento;
 
     @NotBlank
