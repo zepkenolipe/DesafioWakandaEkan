@@ -1,6 +1,5 @@
 package br.com.ekan.desafioekan.documento.domain;
 
-import br.com.ekan.desafioekan.documento.application.api.DocumentoAlteracaoRequest;
 import br.com.ekan.desafioekan.documento.application.api.DocumentoRequest;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -38,12 +37,6 @@ public class Documento {
         this.tipoDocumento = documentoRequest.getTipoDocumento();
         this.descricao = documentoRequest.getDescricao();
         this.dataInclusao = LocalDateTime.now();
-        this.dataAtualizacao = LocalDateTime.now();
-    }
-
-    public void altera(DocumentoAlteracaoRequest documentoRequest) {
-        this.tipoDocumento = documentoRequest.getTipoDocumento();
-        this.descricao = documentoRequest.getDescricao();
         this.dataAtualizacao = LocalDateTime.now();
     }
 }

@@ -26,7 +26,7 @@ public class RestResponseEntityExceptionHandler {
     public ResponseEntity<ErrorApiResponse> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         log.error("DataIntegrityViolationException: ", ex);
         String message = "Violação de integridade de dados.";
-        String description = "Já existe um registro com o mesmo telefone";
+        String description = "Já existe um registro com o mesmo valor ex: telefone ou tipo de documento.";
 
         // Tenta identificar se a causa foi o CPF duplicado para personalizar ainda mais
         if (ex.getRootCause() != null && ex.getRootCause().getMessage() != null) {
