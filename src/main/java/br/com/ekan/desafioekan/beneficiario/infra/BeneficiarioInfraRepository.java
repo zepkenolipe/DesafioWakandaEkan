@@ -1,7 +1,7 @@
 package br.com.ekan.desafioekan.beneficiario.infra;
 
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
-import br.com.ekan.desafioekan.beneficiario.repository.BeneficiarioRepository;
+import br.com.ekan.desafioekan.beneficiario.application.repository.BeneficiarioRepository;
 import br.com.ekan.desafioekan.handler.APIException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

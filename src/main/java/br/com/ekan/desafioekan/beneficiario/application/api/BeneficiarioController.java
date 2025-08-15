@@ -1,6 +1,6 @@
-package br.com.ekan.desafioekan.beneficiario.api;
+package br.com.ekan.desafioekan.beneficiario.application.api;
 
-import br.com.ekan.desafioekan.beneficiario.service.BeneficiarioService;
+import br.com.ekan.desafioekan.beneficiario.application.service.BeneficiarioService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +28,15 @@ public class BeneficiarioController implements BeneficiarioAPI {
         List<BeneficiarioListResponse> beneficiarios = beneficiarioService.buscaTodosBeneficiarios();
         log.info("[finaliza] BeneficiarioController - getTodosBeneficiarios");
         return beneficiarios;
+    }
+
+    @Override
+    public BeneficiarioDetalhadoResponse getBeneficiariosAtravesId(UUID idBeneficiario) {
+        log.info("[inicia] BeneficiarioController - getBeneficiariosAtravesId");
+        log.info("[idBeneficiario] {}", idBeneficiario);
+        BeneficiarioDetalhadoResponse beneficiarioDetalhado = beneficiarioService.buscaBeneficiarioAtravesId(idBeneficiario);
+        log.info("[finaliza] BeneficiarioController - getBeneficiariosAtravesId");
+        return beneficiarioDetalhado;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.beneficiario.repository;
+package br.com.ekan.desafioekan.beneficiario.application.repository;
 
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
 

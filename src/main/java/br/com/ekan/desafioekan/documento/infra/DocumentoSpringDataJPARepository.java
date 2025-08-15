@@ -1,4 +1,9 @@
 package br.com.ekan.desafioekan.documento.infra;
 
-public interface DocumentoSpringDataJPARepository {
+import br.com.ekan.desafioekan.documento.domain.Documento;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface DocumentoSpringDataJPARepository extends JpaRepository<Documento, UUID> {
 }

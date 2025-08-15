@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.beneficiario.api;
+package br.com.ekan.desafioekan.beneficiario.application.api;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -18,6 +18,10 @@ public interface BeneficiarioAPI {
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
     List<BeneficiarioListResponse> getTodosBeneficiarios();
+
+    @GetMapping(value = "/{idBeneficiario}")
+    @ResponseStatus(code = HttpStatus.OK)
+    BeneficiarioDetalhadoResponse getBeneficiariosAtravesId(@PathVariable UUID idBeneficiario);
 
     @PatchMapping(value = "/{idBeneficiario}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
