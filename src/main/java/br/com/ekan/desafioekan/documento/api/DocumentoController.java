@@ -11,11 +11,12 @@ import java.util.UUID;
 @Log4j2
 @RequiredArgsConstructor
 public class DocumentoController implements DocumentoAPI {
+    private final DocumentoService documentoService;
 
     @Override
     public DocumentoResponse postDocumento(UUID idBeneficiario, DocumentoRequest DocumentoRequest) {
         log.info("[inicia] DocumentoController - postDocumento");
-        DocumentoResponse documento = DocumentoService.criaDocumento(idBeneficiario, DocumentoRequest);
+        DocumentoResponse documento = documentoService.criaDocumento(idBeneficiario, DocumentoRequest);
         log.info("[finaliza] DocumentoController - postDocumento");
         return documento;
     }

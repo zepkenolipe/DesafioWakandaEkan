@@ -1,9 +1,6 @@
 package br.com.ekan.desafioekan.beneficiario.service;
 
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioAlteracaoRequest;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioListResponse;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioRequest;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioResponse;
+import br.com.ekan.desafioekan.beneficiario.api.*;
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
 import br.com.ekan.desafioekan.beneficiario.repository.BeneficiarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +32,14 @@ public class BeneficiarioApplicationService implements BeneficiarioService {
         List<Beneficiario> beneficiarios = beneficiarioRepository.buscaTodosBeneficiarios();
         log.info("[finaliza] BeneficiarioApplicationService - buscaTodosBeneficiarios");
         return BeneficiarioListResponse.converte(beneficiarios);
+    }
+
+    @Override
+    public BeneficiarioDetalhadoResponse buscaBeneficiarioAtravesId(UUID idBeneficiario) {
+        log.info("[inicia] BeneficiarioApplicationService - buscaBeneficiarioAtravesId");
+        Beneficiario beneficiario= beneficiarioRepository.buscaBeneficiarioPorId(idBeneficiario);
+        log.info("[finaliza] BeneficiarioApplicationService - buscaBeneficiarioAtravesId");
+        return new BeneficiarioDetalhadoResponse(beneficiario);
     }
 
     @Override

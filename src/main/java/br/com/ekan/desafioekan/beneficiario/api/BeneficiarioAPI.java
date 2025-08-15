@@ -19,6 +19,10 @@ public interface BeneficiarioAPI {
     @ResponseStatus(code = HttpStatus.OK)
     List<BeneficiarioListResponse> getTodosBeneficiarios();
 
+    @GetMapping(value = "/{idBeneficiario}")
+    @ResponseStatus(code = HttpStatus.OK)
+    BeneficiarioDetalhadoResponse getBeneficiariosAtravesId(@PathVariable UUID idBeneficiario);
+
     @PatchMapping(value = "/{idBeneficiario}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     void patchAlteraBeneficiario(@PathVariable UUID idBeneficiario, @Valid @RequestBody BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest);

@@ -31,6 +31,15 @@ public class BeneficiarioController implements BeneficiarioAPI {
     }
 
     @Override
+    public BeneficiarioDetalhadoResponse getBeneficiariosAtravesId(UUID idBeneficiario) {
+        log.info("[inicia] BeneficiarioController - getBeneficiariosAtravesId");
+        log.info("[idBeneficiario] {}", idBeneficiario);
+        BeneficiarioDetalhadoResponse beneficiarioDetalhado = beneficiarioService.buscaBeneficiarioAtravesId(idBeneficiario);
+        log.info("[finaliza] BeneficiarioController - getBeneficiariosAtravesId");
+        return beneficiarioDetalhado;
+    }
+
+    @Override
     public void patchAlteraBeneficiario(UUID idBeneficiario, BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest) {
         log.info("[inicia] BeneficiarioController - patchAlteraBeneficiario");
         log.info("[idBeneficiario] {}", idBeneficiario);

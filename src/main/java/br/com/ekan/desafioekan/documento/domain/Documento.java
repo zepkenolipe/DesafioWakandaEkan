@@ -1,6 +1,9 @@
 package br.com.ekan.desafioekan.documento.domain;
 
+import br.com.ekan.desafioekan.documento.api.DocumentoAlteracaoRequest;
+import br.com.ekan.desafioekan.documento.api.DocumentoRequest;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -26,4 +29,18 @@ public class Documento {
 
     private LocalDateTime dataInclusao;
     private LocalDateTime dataAtualizacao;
+
+    public Documento(UUID idDocumento, @Valid DocumentoRequest documentoRequest ){
+        this.idDocumento = idDocumento;
+        this.tipoDocumento = documentoRequest.getTipoDocumento();
+        this.descricao = documentoRequest.getDescricao();
+        this.dataInclusao = LocalDateTime.now();
+        this.dataAtualizacao = LocalDateTime.now();
+    }
+
+    public void altera(DocumentoAlteracaoRequest documentoRequest) {
+        this.tipoDocumento = documentoRequest.getTipoDocumento();
+        this.descricao = documentoRequest.getDescricao();
+        this.dataAtualizacao = LocalDateTime.now();
+    }
 }

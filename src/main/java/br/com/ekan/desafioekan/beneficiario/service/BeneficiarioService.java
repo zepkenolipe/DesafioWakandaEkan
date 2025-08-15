@@ -1,9 +1,6 @@
 package br.com.ekan.desafioekan.beneficiario.service;
 
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioAlteracaoRequest;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioListResponse;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioRequest;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioResponse;
+import br.com.ekan.desafioekan.beneficiario.api.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,4 +14,6 @@ public interface BeneficiarioService {
     void patchAlteraBeneficiario(UUID idBeneficiario, BeneficiarioAlteracaoRequest beneficiarioAlteracaoRequest);
 
     void deletaBeneficiarioAtravesId(UUID idBeneficiario);
+
+    BeneficiarioDetalhadoResponse buscaBeneficiarioAtravesId(UUID idBeneficiario);
 }
