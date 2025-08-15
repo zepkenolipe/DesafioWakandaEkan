@@ -1,7 +1,7 @@
 package br.com.ekan.desafioekan.beneficiario.domain;
 
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioAlteracaoRequest;
-import br.com.ekan.desafioekan.beneficiario.api.BeneficiarioRequest;
+import br.com.ekan.desafioekan.beneficiario.application.api.BeneficiarioAlteracaoRequest;
+import br.com.ekan.desafioekan.beneficiario.application.api.BeneficiarioRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.documento.api;
+package br.com.ekan.desafioekan.documento.application.api;
 
 import lombok.Value;
 

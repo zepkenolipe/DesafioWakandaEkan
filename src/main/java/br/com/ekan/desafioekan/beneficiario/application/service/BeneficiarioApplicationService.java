@@ -1,8 +1,8 @@
-package br.com.ekan.desafioekan.beneficiario.service;
+package br.com.ekan.desafioekan.beneficiario.application.service;
 
-import br.com.ekan.desafioekan.beneficiario.api.*;
+import br.com.ekan.desafioekan.beneficiario.application.api.*;
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
-import br.com.ekan.desafioekan.beneficiario.repository.BeneficiarioRepository;
+import br.com.ekan.desafioekan.beneficiario.application.repository.BeneficiarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;

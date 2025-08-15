@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.documento.repository;
+package br.com.ekan.desafioekan.documento.application.repository;
 
 import br.com.ekan.desafioekan.documento.domain.Documento;
 

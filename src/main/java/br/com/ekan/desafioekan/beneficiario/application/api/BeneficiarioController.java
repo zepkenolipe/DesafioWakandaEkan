@@ -1,6 +1,6 @@
-package br.com.ekan.desafioekan.beneficiario.api;
+package br.com.ekan.desafioekan.beneficiario.application.api;
 
-import br.com.ekan.desafioekan.beneficiario.service.BeneficiarioService;
+import br.com.ekan.desafioekan.beneficiario.application.service.BeneficiarioService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;

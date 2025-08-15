@@ -1,10 +1,10 @@
-package br.com.ekan.desafioekan.documento.service;
+package br.com.ekan.desafioekan.documento.application.service;
 
-import br.com.ekan.desafioekan.beneficiario.service.BeneficiarioService;
-import br.com.ekan.desafioekan.documento.api.DocumentoRequest;
-import br.com.ekan.desafioekan.documento.api.DocumentoResponse;
+import br.com.ekan.desafioekan.beneficiario.application.service.BeneficiarioService;
+import br.com.ekan.desafioekan.documento.application.api.DocumentoRequest;
+import br.com.ekan.desafioekan.documento.application.api.DocumentoResponse;
 import br.com.ekan.desafioekan.documento.domain.Documento;
-import br.com.ekan.desafioekan.documento.repository.DocumentoRepository;
+import br.com.ekan.desafioekan.documento.application.repository.DocumentoRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

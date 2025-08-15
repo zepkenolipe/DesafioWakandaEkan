@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.beneficiario.api;
+package br.com.ekan.desafioekan.beneficiario.application.api;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

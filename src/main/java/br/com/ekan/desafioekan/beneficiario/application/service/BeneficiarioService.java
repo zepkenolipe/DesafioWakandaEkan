@@ -1,6 +1,6 @@
-package br.com.ekan.desafioekan.beneficiario.service;
+package br.com.ekan.desafioekan.beneficiario.application.service;
 
-import br.com.ekan.desafioekan.beneficiario.api.*;
+import br.com.ekan.desafioekan.beneficiario.application.api.*;
 
 import java.util.List;
 import java.util.UUID;

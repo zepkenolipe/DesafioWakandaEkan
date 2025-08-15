@@ -1,4 +1,4 @@
-package br.com.ekan.desafioekan.beneficiario.api;
+package br.com.ekan.desafioekan.beneficiario.application.api;
 
 import br.com.ekan.desafioekan.beneficiario.domain.Beneficiario;
 import lombok.Value;
