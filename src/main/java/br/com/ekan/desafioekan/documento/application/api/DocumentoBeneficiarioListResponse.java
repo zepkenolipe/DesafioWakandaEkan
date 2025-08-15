@@ -17,7 +17,6 @@ public class DocumentoBeneficiarioListResponse {
     private TipoDocumento tipoDocumento;
     private String descricao;
     private LocalDateTime dataInclusao;
-    private LocalDateTime dataAtualizacao;
 
     public static List<DocumentoBeneficiarioListResponse> converte(List<Documento> documentosDoBeneficiario) {
         return documentosDoBeneficiario.stream()
@@ -31,6 +30,5 @@ public class DocumentoBeneficiarioListResponse {
         this.tipoDocumento = documento.getTipoDocumento();
         this.descricao = documento.getDescricao();
         this.dataInclusao = documento.getDataInclusao();
-        this.dataAtualizacao = documento.getDataAtualizacao();
     }
 }
